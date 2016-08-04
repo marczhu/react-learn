@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script src="build/helloworld.js"></script>
+	<div>
+		<h1>离线转换</h1>
+		安装命令行工具 npm install -g react-tools <br>
+		执行 jsx --watch src/ build/ <br>
+		执行完毕后会生成 build/helloworld.js，内容如下：
+		<div>
+			React.render(
+			  React.createElement('h1', null, 'Hello, world!'),
+			  document.getElementById('example')
+			);
+		</div>
+		But在浏览器中仍然无法正常显示 Hello,World!
+	<div>
+  </body>
+</html>
