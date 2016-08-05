@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello React!</title>
-    <script src="build/react.js"></script>
+    <script src="../build/react.js"></script>
   </head>
   <body>
     <div id="example"></div>
@@ -13,24 +13,45 @@
 		安装命令行工具 npm install -g react-tools <br>
 		执行 jsx --watch src/ build/ <br>
 		执行完毕后会生成 build/helloworld.js，内容如下：
-		<div>
+		<p>
 			React.render(
 			  React.createElement('h1', null, 'Hello, world!'),
 			  document.getElementById('example')
 			);
-		</div>
+		</p>
 		But在浏览器中仍然无法正常显示 Hello,World!
 		<h1>webpack转换</h1>
 		 <p>
 			npm install --save react react-dom babelify babel-preset-react babel-preset-es2015
 		 </p>
 		 <p>
+			npm install babel-core babel-loader
+		 </p>
+		 <p>
 			webpack ./src/helloworld.js ./build/helloworld.js --module-bind 'js=babel-loader'
 		 </p>
 		 <p>
-			
+			在window7下执行 webpack，但是在MacOS下可以正确执行，并且在MacOS可以正常显示!!!
 		 </p>
-		 
+		 <h1>webpack.config.js转换</h1>
+		 <code>
+			module.exports = {
+				entry: './src/helloworld.js',
+				output: {
+					path: "build",
+					filename: 'helloworld.js'
+				},
+				resolve: {
+					extensions: ['', '.js', '.jsx']
+				},
+				module: {
+					loaders: [
+					{ test: /\.js$/, loaders:['babel']}
+					]
+				}
+			}
+		 </code>
+		 <p>直接执行webpack即可</p>
 		 
 	<div>
   </body>
