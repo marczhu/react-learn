@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>DIV+CSS布局</title>
+		<link rel="stylesheet" href="./div_css_simple_tutorial.css?v=16081814" />   
+	</head>
+	<body>
+		<div>
+			<div>
+				<h1>div + css基础</h1>
+				<p>div + css布局简单用法</p>
+			</div>
+			<hr>
+			<code>
+			width\height\background<br/>
+			float用于一行多个div，这里两个block都是float:left,<br/>
+			margin设置两个元素之间的距离 block1设置margin:10px;block2设置margin-left:50px;<br/>
+			</code>
+			<hr>
+		</div>
+		<div class="container1">
+			<div class="block1_1">
+			block1_1
+			</div>
+			<div class="block1_2">
+			block1_2
+			</div>
+		</div>
+		<div>
+			block1 float:left<br/>
+			block2 float:right<br/>
+			<hr>
+		</div>
+		<div class="container2">
+			<div class="block2_1">
+			block2_1
+			</div>
+			<div class="block2_2">
+			block2_2
+			</div>
+		</div>
+		<div>
+			padding属性用于设置一个元素的边框与其内容的距离<br/>
+			container3 padding-left:30px;<br/>
+			container3 padding-top:10px;<br/>
+			<hr>
+		</div>
+
+		<div class="container3">
+			<div class="block3_1">
+			block3_1
+			</div>
+			<div class="block3_2">
+			block3_2
+			</div>
+		</div>
+		<div>
+			在container4中设置两行div(这里的block4_3没有使用float)，但实际效果是和block4_1重合了<br/>
+			<hr>
+		</div>
+		<div class="container4">
+			<div class="block4_1">
+			block4_1
+			</div>
+			<div class="block4_2">
+			block4_2
+			</div>
+			<div class="block4_3">
+			block4_3
+			</div>
+		</div>
+		<div>
+			clear属性主要是清除float属性设置的效果，使用float属性设置一行有多个div后（多列），最好在下一行开始之前使用clear属性清楚一下浮动，否则上面的布局会影响到下面。<br/>
+			这里在block5_3中增加了样式clear:both;<br/>
+			<hr>
+		</div>
+		<div class="container5">
+			<div class="block5_1">
+			block5_1
+			</div>
+			<div class="block5_2">
+			block5_2
+			</div>
+			<div class="block5_3">
+			block5_3
+			</div>
+		</div>
+		<div>
+			把container的height属性去掉，结果父div container就不显示了，原因就是里面的block6_1和block6_2使用了float，此时可以在后面使用clear清除掉<br/>
+			也可以在container6中增加overflow:hidden即可
+			
+			<hr>
+		</div>
+		<div class="container6">
+			<div class="block6_1">
+			block5_1
+			</div>
+			<div class="block6_2">
+			block5_2
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div>
+		还有一个初学div时经常遇到的问题，如果把container6的clear层去掉，然后再在container7下面开始一行新的布局，然后在下面新的div中使用margin-top属性，肯定不管用。这个地方是初学者布局中肯定要遇到的问题，一定要注意。<br/>
+		在container5和container6之间直接加一个清除浮动层即可。<br/>
+			<hr>
+		</div>
+		
+	</body>
+</html>

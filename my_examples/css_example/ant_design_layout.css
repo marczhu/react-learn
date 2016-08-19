@@ -1,0 +1,42 @@
+
+.normal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.head {
+  margin-bottom: 10px;
+  background: #768EF0;
+  height: 80px;
+  padding: 8px;
+  color: #F5F570;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.side {
+  padding: 8px;
+  width: 20%;
+  min-width: 200px;
+  background: #CFFCEA;
+  margin-right: 5px;
+  height: 450px;
+}
+
+.main {
+  padding: 8px;
+  flex: 1 0 auto;
+  background: #F5DA70;
+}
+
+.foot {
+  margin-top: 10px;
+  background: greenyellow;
+  padding: 8px;
+  display: flex;
+  align-items:flex-start;
+}
